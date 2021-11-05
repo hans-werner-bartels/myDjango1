@@ -1,0 +1,16 @@
+# activate virtual environment in VS Code
+. myvenv\Scripts\activate.ps1  # activate virtual environment
+myvenv\Scripts\activate   # in normal console
+
+# neue version der Django APP:
+python manage.py migrate 
+python manage.py makemigrations
+python manage.py runserver
+
+# git push (geht besser)
+
+git status  #shows if there is something to push)
+git commit
+git push
+
+

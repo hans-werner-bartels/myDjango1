@@ -1,0 +1,33 @@
+# create virtual environment for new Django project 
+python3 -m venv myvenv # ceate a virtual environment be in folder for Projeect
+myvenv\Scripts\activate   
+
+python -m pip install --upgrade pip 
+pip install Django     
+# start mew Django Project
+django-admin.exe startproject mysite .
+# add new App inside project 
+python manage.py startapp blog
+
+# a must have to hide the application ceurity key inside the .env file
+#  which will not be uploaded to github (make sure it is included in .gitignore)
+pip install python-decouple 
+
+# create an admin account for Django App:
+python manage.py createsuperuser
+
+# installation needeed to create auditable App
+pip install django-simple-history 
+
+
+# Wenn ein neues 'Model' erstellt wurde,
+# muss es in der Datenbank initialisiert werden, z.B.:
+python manage.py makemigrations blog
+
+
+# connect a github repository to a project:
+git init
+git config --global user.email hwb_by@yahoo.de
+git remote add origin https://github.com/hans-werner-bartels/myfirstblog.git
+
+
